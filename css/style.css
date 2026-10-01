@@ -218,7 +218,7 @@ input {
   display: grid;
 
   grid-template-columns:
-    1fr 420px;
+    1fr 580px;
 
   gap: 100px;
 
@@ -271,7 +271,7 @@ input {
   width: 100%;
 
   background:
-    var(--paper);
+    var(--ivory);
 
   overflow: hidden;
 }
