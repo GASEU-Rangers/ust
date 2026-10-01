@@ -1,6 +1,10 @@
 /* ========================================
    RESET
 ======================================== */
+::selection {
+  background: #E85B4F;
+  color: #FFFFFF;
+}
 
 * {
   box-sizing: border-box;
