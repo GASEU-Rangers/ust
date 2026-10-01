@@ -46,6 +46,7 @@ input {
 
   --black: #171717;
   --gray: #777777;
+  --dark-gray: #555555;
 
   --light-gray: #EAE8E1;
   --line: #DCD9D0;
@@ -68,18 +69,23 @@ input {
 
   width: 100%;
 
-  background: rgba(253, 252, 248, 0.94);
+  background:
+    rgba(253, 252, 248, 0.94);
 
-  border-bottom: 1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
 
-  backdrop-filter: blur(10px);
+  backdrop-filter:
+    blur(10px);
 }
 
+
 .header-inner {
-  width: min(
-    calc(100% - 48px),
-    var(--max-width)
-  );
+  width:
+    min(
+      calc(100% - 48px),
+      var(--max-width)
+    );
 
   min-height: 74px;
 
@@ -90,21 +96,27 @@ input {
   justify-content: space-between;
 }
 
+
 .site-logo {
   font-size: 15px;
   font-weight: 700;
+
   letter-spacing: 0.08em;
 }
+
 
 .navigation {
   display: flex;
   align-items: center;
+
   gap: 34px;
 }
+
 
 .navigation a {
   display: flex;
   align-items: center;
+
   gap: 7px;
 
   font-size: 12px;
@@ -116,23 +128,29 @@ input {
     color 0.2s ease;
 }
 
+
 .navigation a span {
   color: var(--accent);
 
   font-size: 10px;
 }
 
+
 .navigation a:hover {
   color: var(--accent);
 }
+
 
 .menu-button {
   display: none;
 
   border: 0;
+
   background: none;
 
   cursor: pointer;
+
+  color: var(--black);
 
   font-size: 11px;
   font-weight: 600;
@@ -148,19 +166,24 @@ input {
 
 .section {
   width: 100%;
-  border-bottom: 1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
 }
 
+
 .section-inner {
-  width: min(
-    calc(100% - 48px),
-    var(--max-width)
-  );
+  width:
+    min(
+      calc(100% - 48px),
+      var(--max-width)
+    );
 
   margin: 0 auto;
 
   padding: 120px 0;
 }
+
 
 .section-label {
   margin-bottom: 70px;
@@ -180,30 +203,28 @@ input {
 ======================================== */
 
 .profile-section {
-  min-height: calc(100vh - 74px);
+  min-height:
+    calc(100vh - 74px);
 
   display: flex;
   align-items: center;
+
+  background:
+    var(--ivory);
 }
 
-.profile-section .section-inner {
-  width: min(
-    calc(100% - 48px),
-    var(--max-width)
-  );
-}
 
 .profile-layout {
   display: grid;
 
   grid-template-columns:
-    1fr
-    420px;
+    1fr 420px;
 
   gap: 100px;
 
   align-items: center;
 }
+
 
 .eyebrow {
   margin-bottom: 22px;
@@ -216,8 +237,14 @@ input {
   letter-spacing: 0.12em;
 }
 
+
 .profile-heading h1 {
-  font-size: clamp(64px, 9vw, 140px);
+  font-size:
+    clamp(
+      64px,
+      9vw,
+      140px
+    );
 
   font-weight: 600;
 
@@ -225,6 +252,7 @@ input {
 
   letter-spacing: -0.06em;
 }
+
 
 .profile-description {
   max-width: 480px;
@@ -234,15 +262,20 @@ input {
   color: var(--gray);
 
   font-size: 15px;
+
+  line-height: 1.8;
 }
+
 
 .profile-image-wrap {
   width: 100%;
 
-  background: var(--paper);
+  background:
+    var(--paper);
 
   overflow: hidden;
 }
+
 
 .profile-image {
   display: block;
@@ -254,17 +287,19 @@ input {
 
 
 /* ========================================
-   LINKS
+   PROFILE LINKS
 ======================================== */
 
 .profile-links {
   margin-top: 130px;
 }
 
+
 .subsection-title {
   padding-bottom: 18px;
 
-  border-bottom: 1px solid var(--black);
+  border-bottom:
+    1px solid var(--black);
 
   font-size: 11px;
   font-weight: 700;
@@ -272,19 +307,19 @@ input {
   letter-spacing: 0.12em;
 }
 
+
 .links-list a {
   min-height: 72px;
 
   display: grid;
 
   grid-template-columns:
-    50px
-    1fr
-    30px;
+    50px 1fr 30px;
 
   align-items: center;
 
-  border-bottom: 1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
 
   font-size: 13px;
   font-weight: 600;
@@ -296,17 +331,20 @@ input {
     padding 0.2s ease;
 }
 
+
 .links-list a > span:first-child {
   color: var(--accent);
 
   font-size: 10px;
 }
 
+
 .links-list a:hover {
   padding-left: 8px;
 
   color: var(--accent);
 }
+
 
 .link-arrow {
   text-align: right;
@@ -319,119 +357,194 @@ input {
 
 
 /* ========================================
-   IMPORTANT
+   RULES
+   - 이미지의 구조만 적용
+   - 배경은 아이보리 유지
 ======================================== */
 
-.important-section {
-  background: var(--paper);
+.rules-section {
+  background:
+    var(--ivory);
+
+  color:
+    var(--black);
 }
 
-.important-box {
-  display: grid;
 
-  grid-template-columns:
-    260px
-    1fr;
+.rules-section .section-inner {
+  padding-top: 90px;
 
-  gap: 80px;
-
-  padding: 70px;
-
-  border: 1px solid var(--black);
-}
-
-.important-title {
-  color: var(--accent);
-
-  font-size: 13px;
-  font-weight: 700;
-
-  letter-spacing: 0.1em;
-}
-
-.important-content {
-  max-width: 700px;
-}
-
-.important-content p {
-  margin-bottom: 24px;
-
-  font-size: 16px;
-}
-
-.important-content p:last-child {
-  margin-bottom: 0;
+  padding-bottom: 110px;
 }
 
 
 
 /* ========================================
-   RULES
+   RULES TITLE
 ======================================== */
 
-.rules-list {
-  border-top: 1px solid var(--black);
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 18px;
+
+  padding-bottom: 22px;
+
+  border-bottom:
+    1px solid var(--black);
 }
 
-.rule {
+
+.section-number {
+  padding-bottom: 7px;
+
+  color: var(--gray);
+
+  font-size: 10px;
+  font-weight: 500;
+}
+
+
+.section-heading h2 {
+  color: var(--black);
+
+  font-size:
+    clamp(
+      64px,
+      7vw,
+      90px
+    );
+
+  font-weight: 600;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.06em;
+}
+
+
+
+/* ========================================
+   RULES OK / NG GRID
+======================================== */
+
+.rules-grid {
   display: grid;
 
   grid-template-columns:
-    120px
-    1fr;
+    1fr 1fr;
 
-  gap: 50px;
-
-  padding: 60px 0;
-
-  border-bottom: 1px solid var(--line);
+  margin-top: 65px;
 }
+
+
+.rules-column {
+  min-height: 340px;
+
+  padding: 45px 35px;
+}
+
+
+/* LEFT COLUMN */
+
+.rules-column:first-child {
+  padding-left: 35px;
+
+  padding-right: 70px;
+}
+
+
+/* RIGHT COLUMN */
+
+.rules-column:last-child {
+  padding-left: 35px;
+
+  padding-right: 35px;
+
+  border-left:
+    1px solid var(--line);
+}
+
+
+
+/* ========================================
+   RULE NUMBER
+======================================== */
 
 .rule-number {
-  color: var(--accent);
+  margin-bottom: 48px;
 
-  font-size: 13px;
-  font-weight: 700;
+  color: var(--gray);
 
-  letter-spacing: 0.08em;
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
 }
 
-.rule-content {
-  max-width: 760px;
-}
 
-.rule-content h2 {
-  margin-bottom: 20px;
 
-  font-size: 28px;
+/* ========================================
+   OK / NG TITLE
+======================================== */
+
+.rules-column h3 {
+  margin-bottom: 28px;
+
+  color: var(--black);
+
+  font-size: 32px;
+
   font-weight: 600;
 
-  letter-spacing: -0.03em;
+  line-height: 1;
+
+  letter-spacing: -0.04em;
 }
 
-.rule-content p {
-  margin-bottom: 16px;
 
+
+/* ========================================
+   RULE TEXT
+======================================== */
+
+.rules-column p,
+.rules-column li {
   color: var(--gray);
 
-  font-size: 14px;
+  font-size: 12px;
+
+  line-height: 1.9;
 }
 
-.rule-content p:last-of-type {
-  margin-bottom: 0;
+
+.rules-column ul {
+  padding: 0;
+
+  list-style: none;
 }
 
-.rule-content ul {
+
+.rules-column li {
+  margin-bottom: 2px;
+}
+
+
+
+/* ========================================
+   RULES NOTICE
+======================================== */
+
+.rules-notice {
   margin-top: 20px;
-  padding-left: 20px;
 
   color: var(--gray);
 
-  font-size: 14px;
-}
+  font-size: 10px;
 
-.rule-content li {
-  margin-bottom: 9px;
+  line-height: 1.8;
 }
 
 
@@ -441,42 +554,75 @@ input {
 ======================================== */
 
 .files-section {
-  background: var(--paper);
+  background:
+    var(--paper);
 }
+
+
+.files-heading {
+  border-bottom:
+    1px solid var(--black);
+}
+
+
+.files-heading .section-number {
+  color: var(--gray);
+}
+
+
+.files-heading h2 {
+  color: var(--black);
+}
+
+
+
+/* ========================================
+   FILE INTRO
+======================================== */
 
 .files-intro {
-  margin-bottom: 70px;
+  margin-top: 65px;
+
+  margin-bottom: 50px;
 }
 
-.files-intro h2 {
-  margin-bottom: 12px;
-
-  font-size: clamp(42px, 6vw, 80px);
-
-  font-weight: 600;
-
-  line-height: 0.95;
-
-  letter-spacing: -0.05em;
-}
 
 .files-intro p {
+  margin-bottom: 8px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+}
+
+
+.files-intro span {
   color: var(--gray);
 
-  font-size: 14px;
+  font-size: 13px;
 }
 
+
+
+/* ========================================
+   FILE LIST
+======================================== */
+
 .file-list {
-  border-top: 1px solid var(--black);
+  border-top:
+    1px solid var(--black);
 }
+
 
 .file-card {
   display: grid;
 
   grid-template-columns:
-    90px
-    1fr
-    auto;
+    90px 1fr auto;
 
   gap: 30px;
 
@@ -484,24 +630,32 @@ input {
 
   min-height: 130px;
 
-  border-bottom: 1px solid var(--line);
+  border-bottom:
+    1px solid var(--line);
 }
+
 
 .file-number {
   color: var(--accent);
 
   font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 0.08em;
 }
 
+
 .file-main h3 {
   margin-bottom: 6px;
 
+  color: var(--black);
+
   font-size: 19px;
+
   font-weight: 600;
 }
+
 
 .file-original {
   color: var(--gray);
@@ -511,21 +665,33 @@ input {
   letter-spacing: 0.03em;
 }
 
+
+
+/* ========================================
+   DOWNLOAD BUTTON
+======================================== */
+
 .download-button {
   min-width: 140px;
+
   height: 44px;
 
-  padding: 0 22px;
+  padding:
+    0 22px;
 
-  border: 1px solid var(--black);
+  border:
+    1px solid var(--black);
 
-  background: transparent;
+  background:
+    transparent;
 
-  color: var(--black);
+  color:
+    var(--black);
 
   cursor: pointer;
 
   font-size: 10px;
+
   font-weight: 700;
 
   letter-spacing: 0.1em;
@@ -536,17 +702,23 @@ input {
     border-color 0.2s ease;
 }
 
+
 .download-button:hover {
-  background: var(--accent);
+  background:
+    var(--accent);
 
-  border-color: var(--accent);
+  border-color:
+    var(--accent);
 
-  color: white;
+  color:
+    #ffffff;
 }
+
 
 .download-button.downloading {
   opacity: 0.5;
 }
+
 
 .files-note {
   margin-top: 30px;
@@ -572,46 +744,64 @@ input {
   display: none;
 
   align-items: center;
+
   justify-content: center;
 }
+
 
 .password-modal.open {
   display: flex;
 }
+
 
 .password-overlay {
   position: absolute;
 
   inset: 0;
 
-  background: rgba(23, 23, 23, 0.55);
+  background:
+    rgba(
+      23,
+      23,
+      23,
+      0.55
+    );
 }
+
 
 .password-box {
   position: relative;
+
   z-index: 1;
 
-  width: min(
-    calc(100% - 40px),
-    460px
-  );
+  width:
+    min(
+      calc(100% - 40px),
+      460px
+    );
 
   padding: 50px;
 
-  background: var(--ivory);
+  background:
+    var(--ivory);
 
-  border: 1px solid var(--black);
+  border:
+    1px solid var(--black);
 }
+
 
 .password-close {
   position: absolute;
 
   top: 18px;
+
   right: 20px;
 
   border: 0;
 
   background: none;
+
+  color: var(--black);
 
   cursor: pointer;
 
@@ -620,25 +810,32 @@ input {
   line-height: 1;
 }
 
+
 .password-label {
   margin-bottom: 15px;
 
   color: var(--accent);
 
   font-size: 10px;
+
   font-weight: 700;
 
   letter-spacing: 0.12em;
 }
 
+
 .password-box h2 {
   margin-bottom: 12px;
 
+  color: var(--black);
+
   font-size: 27px;
+
   font-weight: 600;
 
   letter-spacing: -0.03em;
 }
+
 
 .password-box > p {
   margin-bottom: 28px;
@@ -648,60 +845,88 @@ input {
   font-size: 13px;
 }
 
+
+
+/* PASSWORD FORM */
+
 #passwordForm {
   display: flex;
+
   gap: 8px;
 }
+
 
 #passwordInput {
   flex: 1;
 
   height: 46px;
 
-  padding: 0 14px;
+  padding:
+    0 14px;
 
-  border: 1px solid var(--black);
+  border:
+    1px solid var(--black);
 
   outline: none;
 
-  background: white;
+  background:
+    #ffffff;
+
+  color:
+    var(--black);
 
   font-size: 13px;
 }
 
+
 #passwordInput:focus {
-  border-color: var(--accent);
+  border-color:
+    var(--accent);
 }
+
 
 #passwordForm button {
   height: 46px;
 
-  padding: 0 20px;
+  padding:
+    0 20px;
 
-  border: 1px solid var(--accent);
+  border:
+    1px solid var(--accent);
 
-  background: var(--accent);
+  background:
+    var(--accent);
 
-  color: white;
+  color:
+    #ffffff;
 
   cursor: pointer;
 
   font-size: 10px;
+
   font-weight: 700;
 
   letter-spacing: 0.08em;
 }
 
+
+
+/* PASSWORD ERROR */
+
 .password-error {
   display: none;
 
   margin-top: 14px !important;
+
   margin-bottom: 0 !important;
 
-  color: var(--accent) !important;
+  color:
+    var(--accent) !important;
 
-  font-size: 12px !important;
+  font-size:
+    12px !important;
 }
+
 
 .password-error.show {
   display: block;
@@ -714,23 +939,29 @@ input {
 ======================================== */
 
 .site-footer {
-  background: var(--black);
+  background:
+    var(--black);
 
-  color: var(--ivory);
+  color:
+    var(--ivory);
 }
 
+
 .footer-inner {
-  width: min(
-    calc(100% - 48px),
-    var(--max-width)
-  );
+  width:
+    min(
+      calc(100% - 48px),
+      var(--max-width)
+    );
 
   min-height: 90px;
 
   margin: 0 auto;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   font-size: 10px;
@@ -746,63 +977,96 @@ input {
 
 @media (max-width: 800px) {
 
+
+  /* ======================================
+     HEADER
+  ====================================== */
+
   .header-inner {
     min-height: 64px;
 
-    width: min(
-      calc(100% - 32px),
-      var(--max-width)
-    );
+    width:
+      min(
+        calc(100% - 32px),
+        var(--max-width)
+      );
   }
+
 
   .menu-button {
     display: block;
   }
 
+
   .navigation {
     position: absolute;
 
     top: 64px;
+
     left: 0;
+
     right: 0;
 
     display: none;
 
     flex-direction: column;
+
     align-items: stretch;
 
     gap: 0;
 
-    background: var(--ivory);
+    background:
+      var(--ivory);
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+      1px solid var(--line);
   }
+
 
   .navigation.open {
     display: flex;
   }
 
+
   .navigation a {
     min-height: 58px;
 
-    padding: 0 20px;
+    padding:
+      0 20px;
 
-    border-bottom: 1px solid var(--line);
+    border-bottom:
+      1px solid var(--line);
   }
+
+
+
+  /* ======================================
+     COMMON
+  ====================================== */
 
   .section-inner {
-    width: calc(100% - 32px);
+    width:
+      calc(100% - 32px);
 
-    padding: 85px 0;
+    padding:
+      85px 0;
   }
+
 
   .section-label {
     margin-bottom: 45px;
   }
 
+
+
+  /* ======================================
+     PROFILE
+  ====================================== */
+
   .profile-section {
     min-height: auto;
   }
+
 
   .profile-layout {
     grid-template-columns: 1fr;
@@ -810,82 +1074,171 @@ input {
     gap: 55px;
   }
 
+
   .profile-heading h1 {
-    font-size: clamp(58px, 18vw, 100px);
+    font-size:
+      clamp(
+        58px,
+        18vw,
+        100px
+      );
   }
+
 
   .profile-description {
     margin-top: 32px;
   }
 
+
   .profile-image-wrap {
     max-width: 500px;
   }
+
 
   .profile-links {
     margin-top: 80px;
   }
 
-  .important-box {
+
+
+  /* ======================================
+     RULES
+  ====================================== */
+
+  .rules-section .section-inner {
+    padding-top: 70px;
+
+    padding-bottom: 80px;
+  }
+
+
+  .section-heading {
+    gap: 12px;
+
+    padding-bottom: 18px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 58px;
+  }
+
+
+  .rules-grid {
     grid-template-columns: 1fr;
 
-    gap: 30px;
-
-    padding: 30px;
+    margin-top: 30px;
   }
 
-  .important-content p {
-    font-size: 14px;
+
+  .rules-column,
+  .rules-column:first-child,
+  .rules-column:last-child {
+
+    min-height: auto;
+
+    padding:
+      35px 0;
   }
 
-  .rule {
-    grid-template-columns: 45px 1fr;
 
-    gap: 15px;
+  .rules-column:last-child {
 
-    padding: 45px 0;
+    border-left: none;
+
+    border-top:
+      1px solid var(--line);
   }
 
-  .rule-content h2 {
-    font-size: 23px;
+
+  .rule-number {
+    margin-bottom: 30px;
   }
+
+
+  .rules-column h3 {
+    font-size: 28px;
+  }
+
+
+  .rules-column p,
+  .rules-column li {
+    font-size: 12px;
+  }
+
+
+  .rules-notice {
+    margin-top: 25px;
+
+    font-size: 9px;
+  }
+
+
+
+  /* ======================================
+     FILES
+  ====================================== */
+
+  .files-intro {
+    margin-top: 45px;
+  }
+
 
   .file-card {
     grid-template-columns:
-      45px
-      1fr;
+      45px 1fr;
 
     gap: 15px;
 
-    padding: 28px 0;
+    padding:
+      28px 0;
   }
+
 
   .file-action {
     grid-column: 2;
   }
 
+
   .download-button {
     width: 100%;
   }
 
+
+
+  /* ======================================
+     PASSWORD MODAL
+  ====================================== */
+
   .password-box {
-    padding: 40px 25px;
+    padding:
+      40px 25px;
   }
+
 
   #passwordForm {
     flex-direction: column;
   }
 
+
   #passwordForm button {
     width: 100%;
   }
 
+
+
+  /* ======================================
+     FOOTER
+  ====================================== */
+
   .footer-inner {
-    width: calc(100% - 32px);
+    width:
+      calc(100% - 32px);
 
     min-height: 80px;
 
     flex-direction: column;
+
     justify-content: center;
 
     gap: 8px;
